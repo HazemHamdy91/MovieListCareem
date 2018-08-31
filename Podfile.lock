@@ -2,17 +2,20 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - DropDown (2.3.1)
   - Kingfisher (4.6.1)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
+  - DropDown
   - Kingfisher (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
 
-PODFILE CHECKSUM: 1899b17fb753a48dd9d1c9e63d6ff46dad1dfe45
+PODFILE CHECKSUM: 377708e67ef15241e67ff92e9ea1645b8fab22f2
 
 COCOAPODS: 1.2.0.rc.1

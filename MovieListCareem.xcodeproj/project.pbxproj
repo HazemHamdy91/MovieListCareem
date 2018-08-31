@@ -18,6 +18,8 @@
 		CFE593192139978200B77403 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593182139978200B77403 /* MovieListViewController.swift */; };
 		CFE5931E2139988200B77403 /* MovieListPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5931D2139988200B77403 /* MovieListPresnter.swift */; };
 		CFE593202139999900B77403 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5931F2139999900B77403 /* Movie.swift */; };
+		CFE5932521399FAA00B77403 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932421399FAA00B77403 /* SearchViewController.swift */; };
+		CFE593292139C3CA00B77403 /* SearchPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593282139C3CA00B77403 /* SearchPresnter.swift */; };
 		FA226A14A75DE61F47865120 /* Pods_MovieListCareem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D073C10136B77E15E2AC58 /* Pods_MovieListCareem.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		CFE593182139978200B77403 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		CFE5931D2139988200B77403 /* MovieListPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresnter.swift; sourceTree = "<group>"; };
 		CFE5931F2139999900B77403 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		CFE5932421399FAA00B77403 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CFE593282139C3CA00B77403 /* SearchPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresnter.swift; sourceTree = "<group>"; };
 		F924BA2E41E0FDF309E3C58B /* Pods_MovieListCareemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListCareemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,8 @@
 		CFE592F32139865400B77403 /* MovieListCareem */ = {
 			isa = PBXGroup;
 			children = (
+				CFE593262139B84D00B77403 /* Managers */,
+				CFE5932121399F3B00B77403 /* MovieSearch */,
 				CFE593172139974D00B77403 /* MovieList */,
 				CFE592F42139865400B77403 /* AppDelegate.swift */,
 				CFE592F62139865400B77403 /* ViewController.swift */,
@@ -134,7 +140,6 @@
 			children = (
 				CFE5931C213997B300B77403 /* ViewController */,
 				CFE5931B213997AC00B77403 /* Presnter */,
-				CFE5931A2139979600B77403 /* Model */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -161,6 +166,47 @@
 				CFE593182139978200B77403 /* MovieListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CFE5932121399F3B00B77403 /* MovieSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CFE5931A2139979600B77403 /* Model */,
+				CFE5932321399F5700B77403 /* Presnter */,
+				CFE5932221399F5400B77403 /* ViewController */,
+			);
+			path = MovieSearch;
+			sourceTree = "<group>";
+		};
+		CFE5932221399F5400B77403 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFE5932421399FAA00B77403 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CFE5932321399F5700B77403 /* Presnter */ = {
+			isa = PBXGroup;
+			children = (
+				CFE593282139C3CA00B77403 /* SearchPresnter.swift */,
+			);
+			path = Presnter;
+			sourceTree = "<group>";
+		};
+		CFE593262139B84D00B77403 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CFE593272139B85700B77403 /* NetworkLayer */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CFE593272139B85700B77403 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		E40CED54226332EE70BA542B /* Frameworks */ = {
@@ -374,7 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE593292139C3CA00B77403 /* SearchPresnter.swift in Sources */,
 				CFE5931E2139988200B77403 /* MovieListPresnter.swift in Sources */,
+				CFE5932521399FAA00B77403 /* SearchViewController.swift in Sources */,
 				CFE592FD2139865400B77403 /* MovieListCareem.xcdatamodeld in Sources */,
 				CFE593202139999900B77403 /* Movie.swift in Sources */,
 				CFE592F72139865400B77403 /* ViewController.swift in Sources */,

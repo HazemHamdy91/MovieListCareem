@@ -10,7 +10,6 @@ target 'MovieListCareem' do
 	pod 'Kingfisher', '~> 4.0'
 	pod 'AlamofireImage', '~> 3.3'
 
-
   target 'MovieListCareemTests' do
     inherit! :search_paths
     # Pods for testing
