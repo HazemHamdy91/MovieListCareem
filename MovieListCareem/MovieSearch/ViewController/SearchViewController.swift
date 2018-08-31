@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Localize_Swift
+import SVProgressHUD
 
 class SearchViewController: UIViewController {
     
-  
+    //Variables
+    var searchPresnter = SearchPresnter()
+    var movieResults = [Movie]()
     
     // Outlets
     @IBOutlet weak var queryTextField: UITextField!
@@ -28,15 +32,41 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // IBActions
+    // IBActions -- Validate Query and get results
     @IBAction func searchAction(_ sender: Any) {
+        // Validate query Text
         if self.queryTextField.text != ""
         {
+            // Load Movies with entered query
+            searchPresnter.loadMovieList(query:self.queryTextField.text! , completionHandler: { (movies, appError) in
+                if appError == nil && movies != nil
+                {
+                    //Navigate to search Results with sending results
+                    self.movieResults = movies ?? [Movie]()
+                    self.performSegue(withIdentifier: "ShowResults", sender: nil)
+                    
+                }else
+                {
+                    self.showAlert(title: "Error".localized(), message: appError?.errorMessage ?? "" , dismissButtonText: "OK".localized())
+                }
+            })
             
         }else
         {
-            self.showAlert(title: "Error", message: "Please enter valid input", dismissButtonText: "OK")
+            self.showAlert(title: "Error".localized(), message: "ValidationError".localized(), dismissButtonText: "OK".localized())
         }
+    }
+    
+    
+    // MARK: - Helper Methods
+    
+    func showLoading()  {
+        SVProgressHUD.show(withStatus: "loading")
+        SVProgressHUD.setDefaultMaskType(.black)
+
+    }
+    func hideLoading()  {
+        SVProgressHUD.dismiss()
     }
     
     
@@ -55,15 +85,17 @@ class SearchViewController: UIViewController {
         view.endEditing(true)
     }
   
-    /*
+ 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let movieListVC = segue.destination as! MovieListViewController
+        movieListVC.movieResults = self.movieResults
     }
-    */
+ 
 
 }
 

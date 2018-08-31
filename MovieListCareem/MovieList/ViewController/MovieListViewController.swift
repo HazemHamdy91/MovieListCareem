@@ -9,8 +9,9 @@
 import UIKit
 
 class MovieListViewController: UIViewController {
-
-
+    
+    // Variables 
+    var movieResults = [Movie]()
     
     
     override func viewDidLoad() {

@@ -22,6 +22,7 @@
 		CFE593292139C3CA00B77403 /* SearchPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593282139C3CA00B77403 /* SearchPresnter.swift */; };
 		CFE5932B2139C72E00B77403 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932A2139C72E00B77403 /* NetworkManager.swift */; };
 		CFE5932E2139C74F00B77403 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932D2139C74F00B77403 /* AppError.swift */; };
+		CFE593302139E6CC00B77403 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFE5932F2139E6CC00B77403 /* Strings.strings */; };
 		FA226A14A75DE61F47865120 /* Pods_MovieListCareem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D073C10136B77E15E2AC58 /* Pods_MovieListCareem.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		CFE593282139C3CA00B77403 /* SearchPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresnter.swift; sourceTree = "<group>"; };
 		CFE5932A2139C72E00B77403 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CFE5932D2139C74F00B77403 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		CFE5932F2139E6CC00B77403 /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
 		F924BA2E41E0FDF309E3C58B /* Pods_MovieListCareemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListCareemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				CFE593002139865400B77403 /* LaunchScreen.storyboard */,
 				CFE593032139865400B77403 /* Info.plist */,
 				CFE592FB2139865400B77403 /* MovieListCareem.xcdatamodeld */,
+				CFE5932F2139E6CC00B77403 /* Strings.strings */,
 			);
 			path = MovieListCareem;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE593022139865400B77403 /* LaunchScreen.storyboard in Resources */,
+				CFE593302139E6CC00B77403 /* Strings.strings in Resources */,
 				CFE592FF2139865400B77403 /* Assets.xcassets in Resources */,
 				CFE592FA2139865400B77403 /* Main.storyboard in Resources */,
 			);

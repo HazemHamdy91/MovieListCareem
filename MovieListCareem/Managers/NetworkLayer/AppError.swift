@@ -19,9 +19,9 @@ class AppError: Error {
     var errorType : ErrorType
     var errorMessage : String
     
-    init(type: ErrorType ,message : String ) {
+    init(type: ErrorType) {
         errorType = type
-        errorMessage = message
+        errorMessage = ""
     }
     
     

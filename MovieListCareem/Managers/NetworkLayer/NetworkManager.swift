@@ -13,7 +13,7 @@ import ObjectMapper
 class NetworkManager: NSObject {
     
     public static let baseURL: String = "http://api.themoviedb.org/3/search/movie"
-    public static let baseImageURL: String = " http://image.tmdb.org/t/p/w185"
+    public static let baseImageURL: String = "http://image.tmdb.org/t/p/w185"
     public static let apiKey: String = "2696829a81b1b5827d515ff121700838"
     
     
@@ -32,22 +32,28 @@ class NetworkManager: NSObject {
                         if let jsonArray = data["results"] as? [[String : Any]]
                         {
                             let items =  Mapper<Movie>().mapArray(JSONArray: jsonArray)
-                            completionHandler(Result.success(items))
+                            if items.count > 0
+                            {
+                              completionHandler(Result.success(items))
+                            }else
+                            {
+                                 completionHandler(Result.failure(AppError.init(type: ErrorType.EmptyResults)))
+                            }
                         }
                         else
                         {
-                            completionHandler(Result.failure(AppError.init(type: ErrorType.EmptyResults, message: "")))
+                            completionHandler(Result.failure(AppError.init(type: ErrorType.EmptyResults)))
                         }
                     }
                 }else
                 {
-                    completionHandler(Result.failure(AppError.init(type: ErrorType.ApiFailure, message: "")))
+                    completionHandler(Result.failure(AppError.init(type: ErrorType.ApiFailure)))
                 }
             }
             
         }else
         {
-            completionHandler(Result.failure(AppError.init(type: ErrorType.NoConnectionError, message: "")))
+            completionHandler(Result.failure(AppError.init(type: ErrorType.NoConnectionError)))
         }
     }
     

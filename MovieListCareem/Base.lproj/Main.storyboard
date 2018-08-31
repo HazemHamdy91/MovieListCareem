@@ -21,7 +21,7 @@
                                 <rect key="frame" x="16" y="94" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-go-2Ad">
                                 <rect key="frame" x="161.5" y="318.5" width="52" height="30"/>
@@ -45,6 +45,7 @@
                     <connections>
                         <outlet property="queryTextField" destination="W6V-rV-vok" id="fFM-hR-d0b"/>
                         <outlet property="searchDisplayController" destination="j0q-WT-tPJ" id="5le-WO-Dkq"/>
+                        <segue destination="aSw-9V-M28" kind="show" identifier="ShowResults" id="jpz-X4-d7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="948" y="869.41529235382313"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie List-->
         <scene sceneID="ar0-VU-Q2H">
             <objects>
-                <viewController id="aSw-9V-M28" sceneMemberID="viewController">
+                <viewController title="Movie List" id="aSw-9V-M28" customClass="MovieListViewController" customModule="MovieListCareem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7or-X1-fxS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftY-hM-0Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="875"/>
+            <point key="canvasLocation" x="1856.8" y="874.81259370314854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TFr-IB-UQ0">

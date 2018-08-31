@@ -1,0 +1,13 @@
+/* 
+  Strings.strings
+  MovieListCareem
+
+  Created by Hazem Hamdy on 8/31/18.
+  Copyright © 2018 Hazem Hamdy. All rights reserved.
+*/
+"NoConnectionErrorMessage" = "No Internet Connection. Please check your connection and try again";
+"GeneralErrorMessage" = "Sorry, Something went wrong!" ;
+"SearchEmptyErrorMessage" = "No results for this name, Please try another name";
+"ValidationError" = "Please enter valid input" ;
+"Error" = "Error";
+"OK" = "OK";
