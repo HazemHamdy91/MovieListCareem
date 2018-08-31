@@ -2,20 +2,26 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
-  - DropDown (2.3.1)
   - Kingfisher (4.6.1)
+  - Localize-Swift (2.0.0)
+  - ObjectMapper (3.1.0)
+  - SVProgressHUD (2.2.2)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
-  - DropDown
   - Kingfisher (~> 4.0)
+  - Localize-Swift (~> 2.0)
+  - ObjectMapper (~> 3.1)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
-  DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 377708e67ef15241e67ff92e9ea1645b8fab22f2
+PODFILE CHECKSUM: e5cc5a633735109b30dd1f7a0bc2c2d0b00d5773
 
 COCOAPODS: 1.2.0.rc.1

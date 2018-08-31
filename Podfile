@@ -9,6 +9,10 @@ target 'MovieListCareem' do
 
 	pod 'Kingfisher', '~> 4.0'
 	pod 'AlamofireImage', '~> 3.3'
+    
+    pod 'SVProgressHUD'
+    pod 'Localize-Swift', '~> 2.0'
+    pod 'ObjectMapper', '~> 3.1'
 
   target 'MovieListCareemTests' do
     inherit! :search_paths

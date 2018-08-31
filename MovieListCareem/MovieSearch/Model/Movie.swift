@@ -7,7 +7,29 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class Movie: NSObject {
 
+class Movie: Mappable {
+    // Variables
+    var name : String!
+    var releaseDate : String!
+    var overview : String!
+    var posterUrl : String!
+    
+    required init?(map: Map) {
+    }
+    
+    init() {
+    }
+    
+    // Mapping Keys
+    func mapping(map: Map) {
+        
+        name <- map["title"]
+        releaseDate <- map["release_date"]
+        overview <- map["overview"]
+        posterUrl <- map["poster_path"]
+        
+    }
 }
