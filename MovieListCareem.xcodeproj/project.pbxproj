@@ -14,6 +14,9 @@
 		CFE592FF2139865400B77403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE592FE2139865400B77403 /* Assets.xcassets */; };
 		CFE593022139865400B77403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFE593002139865400B77403 /* LaunchScreen.storyboard */; };
 		CFE5930D2139865400B77403 /* MovieListCareemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5930C2139865400B77403 /* MovieListCareemTests.swift */; };
+		CFE593192139978200B77403 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593182139978200B77403 /* MovieListViewController.swift */; };
+		CFE5931E2139988200B77403 /* MovieListPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5931D2139988200B77403 /* MovieListPresnter.swift */; };
+		CFE593202139999900B77403 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5931F2139999900B77403 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		CFE593082139865400B77403 /* MovieListCareemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieListCareemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE5930C2139865400B77403 /* MovieListCareemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCareemTests.swift; sourceTree = "<group>"; };
 		CFE5930E2139865400B77403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFE593182139978200B77403 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		CFE5931D2139988200B77403 /* MovieListPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresnter.swift; sourceTree = "<group>"; };
+		CFE5931F2139999900B77403 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		CFE592F32139865400B77403 /* MovieListCareem */ = {
 			isa = PBXGroup;
 			children = (
+				CFE593172139974D00B77403 /* MovieList */,
 				CFE592F42139865400B77403 /* AppDelegate.swift */,
 				CFE592F62139865400B77403 /* ViewController.swift */,
 				CFE592F82139865400B77403 /* Main.storyboard */,
@@ -97,6 +104,40 @@
 				CFE5930E2139865400B77403 /* Info.plist */,
 			);
 			path = MovieListCareemTests;
+			sourceTree = "<group>";
+		};
+		CFE593172139974D00B77403 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				CFE5931C213997B300B77403 /* ViewController */,
+				CFE5931B213997AC00B77403 /* Presnter */,
+				CFE5931A2139979600B77403 /* Model */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		CFE5931A2139979600B77403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE5931F2139999900B77403 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE5931B213997AC00B77403 /* Presnter */ = {
+			isa = PBXGroup;
+			children = (
+				CFE5931D2139988200B77403 /* MovieListPresnter.swift */,
+			);
+			path = Presnter;
+			sourceTree = "<group>";
+		};
+		CFE5931C213997B300B77403 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFE593182139978200B77403 /* MovieListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE5931E2139988200B77403 /* MovieListPresnter.swift in Sources */,
 				CFE592FD2139865400B77403 /* MovieListCareem.xcdatamodeld in Sources */,
+				CFE593202139999900B77403 /* Movie.swift in Sources */,
 				CFE592F72139865400B77403 /* ViewController.swift in Sources */,
 				CFE592F52139865400B77403 /* AppDelegate.swift in Sources */,
+				CFE593192139978200B77403 /* MovieListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
