@@ -24,6 +24,8 @@
 		CFE5932E2139C74F00B77403 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932D2139C74F00B77403 /* AppError.swift */; };
 		CFE593322139FE5C00B77403 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593312139FE5C00B77403 /* MovieTableViewCell.swift */; };
 		CFE59333213AA9AF00B77403 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFE59335213AA9AF00B77403 /* Strings.strings */; };
+		CFE59338213AAD6800B77403 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE59337213AAD6800B77403 /* StorageManager.swift */; };
+		CFE5933A213AB91E00B77403 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE59339213AB91E00B77403 /* CoreData.framework */; };
 		FA226A14A75DE61F47865120 /* Pods_MovieListCareem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D073C10136B77E15E2AC58 /* Pods_MovieListCareem.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		CFE592F12139865400B77403 /* MovieListCareem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieListCareem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE592F42139865400B77403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFE592F62139865400B77403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFE592F92139865400B77403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFE592FC2139865400B77403 /* MovieListCareem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieListCareem.xcdatamodel; sourceTree = "<group>"; };
 		CFE592FE2139865400B77403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFE593012139865400B77403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,9 @@
 		CFE5932D2139C74F00B77403 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		CFE593312139FE5C00B77403 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CFE59334213AA9AF00B77403 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
+		CFE59337213AAD6800B77403 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CFE59339213AB91E00B77403 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CFE5933C213ABF3300B77403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F924BA2E41E0FDF309E3C58B /* Pods_MovieListCareemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListCareemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE5933A213AB91E00B77403 /* CoreData.framework in Frameworks */,
 				FA226A14A75DE61F47865120 /* Pods_MovieListCareem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +212,7 @@
 		CFE593262139B84D00B77403 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CFE59336213AAD4300B77403 /* StorageManager */,
 				CFE593272139B85700B77403 /* NetworkLayer */,
 			);
 			path = Managers;
@@ -221,9 +227,18 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		CFE59336213AAD4300B77403 /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				CFE59337213AAD6800B77403 /* StorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
 		E40CED54226332EE70BA542B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFE59339213AB91E00B77403 /* CoreData.framework */,
 				B4D073C10136B77E15E2AC58 /* Pods_MovieListCareem.framework */,
 				F924BA2E41E0FDF309E3C58B /* Pods_MovieListCareemTests.framework */,
 			);
@@ -436,6 +451,7 @@
 				CFE5932B2139C72E00B77403 /* NetworkManager.swift in Sources */,
 				CFE593292139C3CA00B77403 /* SearchPresnter.swift in Sources */,
 				CFE5932E2139C74F00B77403 /* AppError.swift in Sources */,
+				CFE59338213AAD6800B77403 /* StorageManager.swift in Sources */,
 				CFE5931E2139988200B77403 /* MovieListPresnter.swift in Sources */,
 				CFE5932521399FAA00B77403 /* SearchViewController.swift in Sources */,
 				CFE592FD2139865400B77403 /* MovieListCareem.xcdatamodeld in Sources */,
@@ -469,7 +485,7 @@
 		CFE592F82139865400B77403 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CFE592F92139865400B77403 /* Base */,
+				CFE5933C213ABF3300B77403 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

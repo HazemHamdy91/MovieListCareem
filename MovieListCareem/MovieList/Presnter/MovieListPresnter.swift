@@ -50,11 +50,11 @@ class MovieListPresnter: NSObject {
     func handleErrorMEssage(error : AppError) -> AppError {
         switch error.errorType {
         case ErrorType.NoConnectionError:
-            error.errorMessage = "NoConnectionErrorMessage".localized()
+            error.errorMessage = "NoConnectionErrorMessage".LocalizedString()
         case ErrorType.ApiFailure:
-            error.errorMessage = "GeneralErrorMessage".localized()
+            error.errorMessage = "GeneralErrorMessage".LocalizedString()
         case ErrorType.EmptyResults:
-            error.errorMessage = "ListEmptyErrorMessage".localized()
+            error.errorMessage = "ListEmptyErrorMessage".LocalizedString()
         }
         return error
     }

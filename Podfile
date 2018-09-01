@@ -13,6 +13,7 @@ target 'MovieListCareem' do
     pod 'SVProgressHUD'
     pod 'Localize-Swift', '~> 2.0'
     pod 'ObjectMapper', '~> 3.1'
+    pod 'DropDown'
 
   target 'MovieListCareemTests' do
     inherit! :search_paths

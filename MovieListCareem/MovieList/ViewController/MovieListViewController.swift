@@ -48,7 +48,7 @@ class MovieListViewController: UIViewController {
                 }
             }else
             {
-                self.showAlert(title: "Error".localized(), message: appError?.errorMessage ?? "" , dismissButtonText: "OK".localized())
+                self.showAlert(title: "Error".LocalizedString(), message: appError?.errorMessage ?? "" , dismissButtonText: "OK".LocalizedString())
             }
         })
     }
