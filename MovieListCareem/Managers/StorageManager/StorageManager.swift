@@ -22,12 +22,20 @@ class StorageManager: NSObject {
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "History")
         
+        
         do {
-            let historyManaged = try managedContext.fetch(fetchRequest)
+            var historyManaged = try managedContext.fetch(fetchRequest)
+            historyManaged = historyManaged.reversed()
             var historyStrings = [String]()
-            for NSManagedObject in historyManaged
+            // defaine max size to be 10 or the count of returned results
+            if historyManaged.count > 0
             {
-                historyStrings.append(NSManagedObject.value(forKeyPath: "query") as? String ?? "")
+                let maxRange = min(historyManaged.count-1, 9)
+                for i in  0...maxRange
+                {
+                    let nsManagedObject = historyManaged[i]
+                    historyStrings.append(nsManagedObject.value(forKeyPath: "query") as? String ?? "")
+                }
             }
             return historyStrings
         } catch let error as NSError {
