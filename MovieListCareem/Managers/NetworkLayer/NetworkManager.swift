@@ -34,10 +34,10 @@ class NetworkManager: NSObject {
                             let items =  Mapper<Movie>().mapArray(JSONArray: jsonArray)
                             if items.count > 0
                             {
-                              completionHandler(Result.success(items))
+                                completionHandler(Result.success(items))
                             }else
                             {
-                                 completionHandler(Result.failure(AppError.init(type: ErrorType.EmptyResults)))
+                                completionHandler(Result.failure(AppError.init(type: ErrorType.EmptyResults)))
                             }
                         }
                         else

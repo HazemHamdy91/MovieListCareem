@@ -22,7 +22,8 @@
 		CFE593292139C3CA00B77403 /* SearchPresnter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593282139C3CA00B77403 /* SearchPresnter.swift */; };
 		CFE5932B2139C72E00B77403 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932A2139C72E00B77403 /* NetworkManager.swift */; };
 		CFE5932E2139C74F00B77403 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5932D2139C74F00B77403 /* AppError.swift */; };
-		CFE593302139E6CC00B77403 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFE5932F2139E6CC00B77403 /* Strings.strings */; };
+		CFE593322139FE5C00B77403 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE593312139FE5C00B77403 /* MovieTableViewCell.swift */; };
+		CFE59333213AA9AF00B77403 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFE59335213AA9AF00B77403 /* Strings.strings */; };
 		FA226A14A75DE61F47865120 /* Pods_MovieListCareem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D073C10136B77E15E2AC58 /* Pods_MovieListCareem.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,8 @@
 		CFE593282139C3CA00B77403 /* SearchPresnter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresnter.swift; sourceTree = "<group>"; };
 		CFE5932A2139C72E00B77403 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CFE5932D2139C74F00B77403 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		CFE5932F2139E6CC00B77403 /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		CFE593312139FE5C00B77403 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		CFE59334213AA9AF00B77403 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Strings.strings; sourceTree = "<group>"; };
 		F924BA2E41E0FDF309E3C58B /* Pods_MovieListCareemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListCareemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,7 +130,7 @@
 				CFE593002139865400B77403 /* LaunchScreen.storyboard */,
 				CFE593032139865400B77403 /* Info.plist */,
 				CFE592FB2139865400B77403 /* MovieListCareem.xcdatamodeld */,
-				CFE5932F2139E6CC00B77403 /* Strings.strings */,
+				CFE59335213AA9AF00B77403 /* Strings.strings */,
 			);
 			path = MovieListCareem;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE593182139978200B77403 /* MovieListViewController.swift */,
+				CFE593312139FE5C00B77403 /* MovieTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE593022139865400B77403 /* LaunchScreen.storyboard in Resources */,
-				CFE593302139E6CC00B77403 /* Strings.strings in Resources */,
+				CFE59333213AA9AF00B77403 /* Strings.strings in Resources */,
 				CFE592FF2139865400B77403 /* Assets.xcassets in Resources */,
 				CFE592FA2139865400B77403 /* Main.storyboard in Resources */,
 			);
@@ -439,6 +442,7 @@
 				CFE593202139999900B77403 /* Movie.swift in Sources */,
 				CFE592F72139865400B77403 /* ViewController.swift in Sources */,
 				CFE592F52139865400B77403 /* AppDelegate.swift in Sources */,
+				CFE593322139FE5C00B77403 /* MovieTableViewCell.swift in Sources */,
 				CFE593192139978200B77403 /* MovieListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +480,14 @@
 				CFE593012139865400B77403 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFE59335213AA9AF00B77403 /* Strings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFE59334213AA9AF00B77403 /* en */,
+			);
+			name = Strings.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -595,11 +607,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieListCareem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Careem.MovieListCareem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,11 +623,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieListCareem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Careem.MovieListCareem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

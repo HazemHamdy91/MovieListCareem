@@ -38,7 +38,9 @@ class SearchViewController: UIViewController {
         if self.queryTextField.text != ""
         {
             // Load Movies with entered query
+            self.showLoading()
             searchPresnter.loadMovieList(query:self.queryTextField.text! , completionHandler: { (movies, appError) in
+                self.hideLoading()
                 if appError == nil && movies != nil
                 {
                     //Navigate to search Results with sending results
@@ -94,6 +96,7 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
         let movieListVC = segue.destination as! MovieListViewController
         movieListVC.movieResults = self.movieResults
+        movieListVC.query = self.queryTextField.text!
     }
  
 

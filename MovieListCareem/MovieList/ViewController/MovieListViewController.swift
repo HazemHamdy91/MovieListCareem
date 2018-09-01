@@ -10,13 +10,21 @@ import UIKit
 
 class MovieListViewController: UIViewController {
     
-    // Variables 
+    // Variables
+    var moviePresnter = MovieListPresnter()
     var movieResults = [Movie]()
+    var query = ""
     
+    // Outlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
   
+        // Dynamic Table View Cell hieght
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 103.0;
         // Do any additional setup after loading the view.
     }
 
@@ -25,8 +33,37 @@ class MovieListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+     // MARK: - Pagination Methods
     
-
+    func loadMoreMovies()  {
+        self.showActivityIndicator()
+        moviePresnter.loadMovieList(query: query, completionHandler: { (movies, appError) in
+            self.hideActivityIndicator()
+            if appError == nil && movies != nil
+            {
+                if movies!.count > 0
+                {
+                    self.movieResults.append(contentsOf: movies!)
+                    self.tableView.reloadData()
+                }
+            }else
+            {
+                self.showAlert(title: "Error".localized(), message: appError?.errorMessage ?? "" , dismissButtonText: "OK".localized())
+            }
+        })
+    }
+    
+    
+    // MARK: - Handle Activity Methods
+    func showActivityIndicator()  {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+    }
+    func hideActivityIndicator(){
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+    }
+    
     
     
     /*
@@ -39,4 +76,30 @@ class MovieListViewController: UIViewController {
     }
     */
 
+}
+
+extension MovieListViewController: UITableViewDelegate,UITableViewDataSource {
+    
+  
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movieResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MovieTableViewCell
+        
+        cell.configure(movie: movieResults[indexPath.item])
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == movieResults.count-1 {
+           // load More data
+            self.loadMoreMovies()
+        }
+    }
+    
+    
 }

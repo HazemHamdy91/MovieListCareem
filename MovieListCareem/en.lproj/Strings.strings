@@ -8,6 +8,7 @@
 "NoConnectionErrorMessage" = "No Internet Connection. Please check your connection and try again";
 "GeneralErrorMessage" = "Sorry, Something went wrong!" ;
 "SearchEmptyErrorMessage" = "No results for this name, Please try another name";
+"ListEmptyErrorMessage" = "No more results to show";
 "ValidationError" = "Please enter valid input" ;
 "Error" = "Error";
 "OK" = "OK";
